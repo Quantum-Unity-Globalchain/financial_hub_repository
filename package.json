@@ -20,7 +20,7 @@
   },
   "homepage": "https://yourrepositoryurl#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.6.0",
     "ethers": "^5.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -1,0 +1,16 @@
+name: Connect and Print Repo Info
+
+on: [push]
+
+jobs:
+  print_repo_info:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Print GitHub Repository Info
+      run: |
+        echo "Repository: ${{ secrets.GITHUB_REPO }}"
+        echo "Username: ${{ secrets.GITHUB_USERNAME }}"
+        echo "Branch: ${{ secrets.GITHUB_BRANCH }}"

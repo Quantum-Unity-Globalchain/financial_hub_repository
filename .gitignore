@@ -1,0 +1,35 @@
+# Environment variables and configuration files
+.env
+secrets.json
+
+# Security certificates
+*.pem
+*.cert
+*.key
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Log files
+*.log
+
+# Database files
+db.sqlite3
+db.sqlite3-journal
+
+# Other sensitive files
+# Add any other file patterns that are sensitive
+
+# Media files
+media/
+
+# Static files
+static/
+
+# Virtual environment
+venv/
+
+# Node modules
+node_modules/

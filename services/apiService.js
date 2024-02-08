@@ -16,7 +16,7 @@ const apiService = {
       const response = await axios.post(`${API_BASE_URL}/login/`, { email, password });
       return response.data;
     } catch (error) {
-      console.error('Login Error:', error.response);
+      console.error('Login Error:', error.response || error);
       throw error;
     }
   },
@@ -26,7 +26,7 @@ const apiService = {
       const response = await axios.post(`${API_BASE_URL}/register/`, userData);
       return response.data;
     } catch (error) {
-      console.error('Registration Error:', error.response);
+      console.error('Registration Error:', error.response || error);
       throw error;
     }
   },
@@ -37,7 +37,7 @@ const apiService = {
       const response = await axios.get(`${API_BASE_URL}/accounts/`, getAuthHeader(token));
       return response.data;
     } catch (error) {
-      console.error('Fetch Accounts Error:', error.response);
+      console.error('Fetch Accounts Error:', error.response || error);
       throw error;
     }
   },
@@ -48,7 +48,7 @@ const apiService = {
       const response = await axios.post(`${API_BASE_URL}/transactions/`, transactionData, getAuthHeader(token));
       return response.data;
     } catch (error) {
-      console.error('Transaction Error:', error.response);
+      console.error('Transaction Error:', error.response || error);
       throw error;
     }
   },
@@ -59,7 +59,7 @@ const apiService = {
       const response = await axios.get(`${API_BASE_URL}/wallets/`, getAuthHeader(token));
       return response.data;
     } catch (error) {
-      console.error('Fetch Wallet Info Error:', error.response);
+      console.error('Fetch Wallet Info Error:', error.response || error);
       throw error;
     }
   },
@@ -69,7 +69,7 @@ const apiService = {
       const response = await axios.post(`${API_BASE_URL}/ethereum-transactions/`, transactionData, getAuthHeader(token));
       return response.data;
     } catch (error) {
-      console.error('Ethereum Transaction Error:', error.response);
+      console.error('Ethereum Transaction Error:', error.response || error);
       throw error;
     }
   },

@@ -24,7 +24,7 @@ class StripeWrapper:
             return charge
         except stripe.error.StripeError as e:
             # Log the error
-            print(f"Stripe Error: {e.user_message}")
+            print("Stripe Error: {e.user_message}")
             return None
 
     def create_customer(self, email, source):
@@ -42,7 +42,7 @@ class StripeWrapper:
             return customer
         except stripe.error.StripeError as e:
             # Log the error
-            print(f"Stripe Error: {e.user_message}")
+            print("Stripe Error: {e.user_message}")
             return None
 
     def create_subscription(self, customer_id, plan_id):
@@ -60,7 +60,7 @@ class StripeWrapper:
             return subscription
         except stripe.error.StripeError as e:
             # Log the error
-            print(f"Stripe Error: {e.user_message}")
+            print("Stripe Error: {e.user_message}")
             return None
 
 # Remember to replace 'your-stripe-api-key' with your actual Stripe secret key

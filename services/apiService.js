@@ -59,7 +59,11 @@ const apiService = {
       const response = await axios.get(`${API_BASE_URL}/wallets/`, getAuthHeader(token));
       return response.data;
     } catch (error) {
-      console.error('Fetch Wallet Info Error:', error.response || error);
+      if (!error.response) { // Network error
+        console.error('Network Error:', error);
+      } else {
+        console.error('Fetch Wallet Info Error:', error.response || error);
+      }
       throw error;
     }
   },

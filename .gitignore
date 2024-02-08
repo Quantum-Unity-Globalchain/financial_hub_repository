@@ -30,5 +30,6 @@ static/
 
 # Virtual environment
 venv/
-# Exclude .env file
-.env
+
+# Node modules
+node_modules/

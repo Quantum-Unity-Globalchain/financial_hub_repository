@@ -1,3 +1,5 @@
+import requests
+
 def __init__(self, client_id, client_secret, **kwargs):
     self.client_id = client_id
     self.client_secret = client_secret
@@ -16,4 +18,8 @@ def get_providers(self):
     Retrieves the list of providers.
     """
     endpoint = "/providers"
-    return self._make_request(endpoint)
+    try:
+        return self._make_request(endpoint)
+    except requests.exceptions.RequestException as e:
+        print('Error fetching providers:', e)
+        return None

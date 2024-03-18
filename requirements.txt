@@ -2,13 +2,13 @@ asgiref==3.7.2
 certifi==2024.2.2
 charset-normalizer==3.3.2
 dj-database-url==2.1.0
-Django==5.0.2
+Django==5.0.3
 djangorestframework==3.14.0
 djangorestframework-jwt==1.11.0
 idna==3.6
 nulltype==2.3.1
 plaid-python==18.4.0
-PyJWT==1.7.1
+PyJWT==2.4.0
 python-dateutil==2.8.2
 python-dotenv==1.0.1
 pytz==2024.1
